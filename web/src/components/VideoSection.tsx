@@ -43,12 +43,6 @@ export function VideoSection() {
           >
             Watch on Instagram
           </a>
-          {!reelVideoSrc && (
-            <p className="edit-note">
-              [EDIT] Add your Reel as public/videos/reel.mp4 and set reelVideoSrc in
-              src/data/restaurant.ts
-            </p>
-          )}
         </div>
 
         <div className="reels-stage">

@@ -39,13 +39,6 @@ export function QrPage() {
             Back to website
           </Link>
         </div>
-
-        {!restaurant.siteUrl && (
-          <p className="edit-note">
-            [EDIT] After deploying, set siteUrl in src/data/restaurant.ts so the QR always points to
-            your live domain.
-          </p>
-        )}
       </div>
     </div>
   )
