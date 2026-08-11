@@ -3,7 +3,6 @@ import { Hero } from '../components/Hero'
 import { About } from '../components/About'
 import { Gallery } from '../components/Gallery'
 import { VideoSection } from '../components/VideoSection'
-import { Menu } from '../components/Menu'
 import { VisitUs } from '../components/VisitUs'
 import { Social } from '../components/Social'
 import { Footer } from '../components/Footer'
@@ -20,7 +19,6 @@ export function HomePage() {
         <About />
         <Gallery />
         <VideoSection />
-        <Menu />
         <VisitUs />
         <Social />
       </main>

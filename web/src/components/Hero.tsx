@@ -18,8 +18,8 @@ export function Hero() {
         </h1>
         <p className="hero-welcome">{restaurant.welcome}</p>
         <div className="hero-actions">
-          <a className="btn btn-primary" href="#menu">
-            View Menu
+          <a className="btn btn-primary" href="#gallery">
+            See Gallery
           </a>
           <a className="btn btn-secondary" href={restaurant.contact.phoneHref}>
             Call Us

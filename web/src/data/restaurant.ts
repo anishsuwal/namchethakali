@@ -38,12 +38,9 @@ export const restaurant = {
   },
 
   /**
-   * Opens the Google Maps listing so guests can leave a review.
-   * Prefer your Google Business “Get more reviews” link if you have one
-   * (looks like https://g.page/r/XXXX/review).
+   * Google Business “Get more reviews” link.
    */
-  googleReviewUrl:
-    'https://www.google.com/maps?cid=6541390391594361283',
+  googleReviewUrl: 'https://g.page/r/CcOhIkTnr8daEBM/review',
 
   /**
    * After you deploy the website, put the live domain here

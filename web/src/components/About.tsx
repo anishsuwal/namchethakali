@@ -13,7 +13,6 @@ export function About() {
               {paragraph}
             </p>
           ))}
-          <p className="edit-note">[EDIT] Add your restaurant story or rooms details in src/data/restaurant.ts</p>
         </div>
         <figure className="about-figure">
           <img
