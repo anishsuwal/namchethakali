@@ -7,7 +7,13 @@
   padding: clamp(1.5rem, 4vw, 2.5rem);
   box-shadow: var(--shadow);
   display: grid;
-  gap: 1.75rem;
+  gap: 1.5rem;
+}
+
+.visit-copy {
+  display: grid;
+  gap: 1.5rem;
+  align-content: start;
 }
 
 .visit-details {
@@ -37,19 +43,61 @@
 
 .hours-row {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.35rem 1rem;
-  padding: 0.25rem 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  padding: 0.15rem 0;
 }
 
 .hours-row strong {
   font-weight: 600;
 }
 
+.hours-row span {
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
 .visit-actions {
   display: grid;
   gap: 0.7rem;
+}
+
+.visit-actions .btn {
+  gap: 0.5rem;
+}
+
+.visit-btn-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.visit-whatsapp {
+  border-color: rgba(37, 211, 102, 0.45);
+}
+
+.visit-whatsapp:hover {
+  border-color: #25d366;
+  color: #128c7e;
+}
+
+.visit-map {
+  position: relative;
+  min-height: 280px;
+  border-radius: calc(var(--radius) + 2px);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #e8dfd2;
+}
+
+.visit-map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 @media (min-width: 700px) {
@@ -60,5 +108,17 @@
   .visit-actions {
     grid-template-columns: auto auto auto;
     justify-content: start;
+  }
+}
+
+@media (min-width: 900px) {
+  .visit-card {
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  .visit-map {
+    min-height: 100%;
   }
 }

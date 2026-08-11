@@ -24,6 +24,9 @@ export const restaurant = {
     /* [EDIT] Replace with your Google Maps link when ready */
     directionsHref:
       'https://www.google.com/maps/search/?api=1&query=Namche+Thakali+Kitchen+and+Inn+Jhochhen+Kathmandu',
+    /** Embedded map centered on the restaurant */
+    mapsEmbedUrl:
+      'https://maps.google.com/maps?q=27.7020672,85.3344256+(Namche+Thakali+Kitchen+and+Inn)&z=17&hl=en&output=embed',
     hours: [
       { day: 'Sunday – Saturday', time: '10:00 AM – 9:00 PM' },
     ],
@@ -35,9 +38,13 @@ export const restaurant = {
     tiktok: 'https://www.tiktok.com/@namche.thakali',
   },
 
-  /** Google “Write a review” link (from your QR). */
+  /**
+   * Opens the Google Maps listing so guests can leave a review.
+   * Prefer your Google Business “Get more reviews” link if you have one
+   * (looks like https://g.page/r/XXXX/review).
+   */
   googleReviewUrl:
-    'https://search.google.com/local/writereview?placeid=ChIJwW7sF_j77zkR3M1E3GZl3tM',
+    'https://www.google.com/maps/place/?q=place_id:ChIJwW7sF_j77zkR3M1E3GZl3tM',
 
   /**
    * After you deploy the website, put the live domain here

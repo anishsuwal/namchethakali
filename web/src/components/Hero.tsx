@@ -1,4 +1,4 @@
-import { heroImage, logoSrc, restaurant } from '../data/restaurant'
+import { heroImage, restaurant } from '../data/restaurant'
 import './Hero.css'
 
 export function Hero() {
@@ -12,13 +12,6 @@ export function Hero() {
       />
       <div className="hero-shade" aria-hidden="true" />
       <div className="hero-content container">
-        <img
-          className="hero-logo"
-          src={logoSrc}
-          alt="Namche Thakali Kitchen and Inn official logo"
-          width={180}
-          height={220}
-        />
         <h1 className="hero-title">
           <span className="hero-name">{restaurant.name}</span>
           <span className="hero-sub">{restaurant.tagline}</span>

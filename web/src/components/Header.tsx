@@ -1,4 +1,4 @@
-import { restaurant } from '../data/restaurant'
+import { logoSrc, restaurant } from '../data/restaurant'
 import './Header.css'
 
 const links = [
@@ -14,8 +14,17 @@ export function Header() {
     <header className="site-header">
       <div className="container site-header-inner">
         <a href="#top" className="site-header-brand">
-          <span className="brand-name">{restaurant.name}</span>
-          <span className="brand-tag">{restaurant.tagline}</span>
+          <img
+            className="brand-logo"
+            src={logoSrc}
+            alt="Namche Thakali Kitchen and Inn"
+            width={60}
+            height={60}
+          />
+          <span className="brand-text">
+            <span className="brand-name">{restaurant.name}</span>
+            <span className="brand-tag">{restaurant.tagline}</span>
+          </span>
         </a>
         <nav className="site-nav" aria-label="Primary">
           {links.map((link) => (

@@ -64,7 +64,7 @@ export function LinksPage() {
             <span className="links-star" aria-hidden="true">
               ★
             </span>
-            Google Reviews
+            Open Google Maps
           </span>
         </a>
 

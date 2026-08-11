@@ -5,6 +5,7 @@ type SocialItem = {
   label: string
   href: string
   icon: string
+  brand: 'ig' | 'fb' | 'tt'
 }
 
 const socials: SocialItem[] = [
@@ -12,16 +13,19 @@ const socials: SocialItem[] = [
     label: 'Instagram',
     href: restaurant.social.instagram,
     icon: '/icons/instagram.svg',
+    brand: 'ig',
   },
   {
     label: 'Facebook',
     href: restaurant.social.facebook,
     icon: '/icons/facebook.svg',
+    brand: 'fb',
   },
   {
     label: 'TikTok',
     href: restaurant.social.tiktok,
     icon: '/icons/tiktok.svg',
+    brand: 'tt',
   },
 ]
 
@@ -35,40 +39,20 @@ export function Social() {
           <p className="section-copy">Daily specials, reels, and kitchen moments.</p>
         </div>
         <div className="social-buttons">
-          {socials.map((item) =>
-            item.href ? (
-              <a
-                key={item.label}
-                className="btn btn-outline social-btn"
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="social-icon"
-                  src={item.icon}
-                  alt=""
-                  width={22}
-                  height={22}
-                  aria-hidden="true"
-                />
-                <span>{item.label}</span>
-              </a>
-            ) : (
-              <span key={item.label} className="btn btn-outline social-btn is-placeholder">
-                <img
-                  className="social-icon"
-                  src={item.icon}
-                  alt=""
-                  width={22}
-                  height={22}
-                  aria-hidden="true"
-                />
-                <span>{item.label}</span>
-                <span className="edit-note">[EDIT URL]</span>
+          {socials.map((item) => (
+            <a
+              key={item.label}
+              className="social-btn"
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className={`social-badge ${item.brand}`}>
+                <img src={item.icon} alt="" width={16} height={16} aria-hidden="true" />
               </span>
-            ),
-          )}
+              <span className="social-label">{item.label}</span>
+            </a>
+          ))}
         </div>
       </div>
     </section>
