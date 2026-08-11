@@ -21,12 +21,11 @@ export const restaurant = {
     phoneHref: 'tel:+9779851004974',
     whatsapp: '+977 985-1004974',
     whatsappHref: 'https://wa.me/9779851004974',
-    /* [EDIT] Replace with your Google Maps link when ready */
+    /** Correct Google Maps listing for Namche Thakali */
     directionsHref:
-      'https://www.google.com/maps/search/?api=1&query=Namche+Thakali+Kitchen+and+Inn+Jhochhen+Kathmandu',
-    /** Embedded map centered on the restaurant */
+      'https://www.google.com/maps/place/namche+thakali/data=!4m2!3m1!1s0x39eb19579a07b5c5:0x5ac7afe74422a1c3',
     mapsEmbedUrl:
-      'https://maps.google.com/maps?q=27.7020672,85.3344256+(Namche+Thakali+Kitchen+and+Inn)&z=17&hl=en&output=embed',
+      'https://maps.google.com/maps?cid=6541390391594361283&z=17&hl=en&output=embed',
     hours: [
       { day: 'Sunday – Saturday', time: '10:00 AM – 9:00 PM' },
     ],
@@ -44,7 +43,7 @@ export const restaurant = {
    * (looks like https://g.page/r/XXXX/review).
    */
   googleReviewUrl:
-    'https://www.google.com/maps/place/?q=place_id:ChIJwW7sF_j77zkR3M1E3GZl3tM',
+    'https://www.google.com/maps?cid=6541390391594361283',
 
   /**
    * After you deploy the website, put the live domain here
