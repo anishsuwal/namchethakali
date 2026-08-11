@@ -1,0 +1,48 @@
+.social-inner {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.social-buttons {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.social-btn {
+  justify-content: flex-start;
+  gap: 0.75rem;
+  min-height: 54px;
+}
+
+.social-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.social-btn.is-placeholder {
+  opacity: 0.75;
+  cursor: default;
+}
+
+@media (min-width: 700px) {
+  .social-inner {
+    grid-template-columns: 1fr auto;
+    align-items: end;
+  }
+
+  .social-buttons {
+    grid-template-columns: repeat(3, minmax(148px, 1fr));
+  }
+
+  .social-btn {
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .social-icon {
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,81 @@
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(12, 8, 6, 0.92);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  animation: fade-in 0.2s ease;
+}
+
+.lightbox-image {
+  max-width: min(96vw, 960px);
+  max-height: 84vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  box-shadow: var(--shadow);
+}
+
+.lightbox-image.is-loaded {
+  opacity: 1;
+}
+
+.lightbox-close,
+.lightbox-nav {
+  position: absolute;
+  color: var(--white);
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 1.6rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+}
+
+.lightbox-close {
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+}
+
+.lightbox-nav.prev {
+  left: 0.75rem;
+}
+
+.lightbox-nav.next {
+  right: 0.75rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .lightbox-nav {
+    display: none;
+  }
+}
